@@ -1,12 +1,12 @@
 class Admin::Preference < ActiveRecord::Base
 
-  def change_artist(pref)
-    if pref.allow_create_artists == true
-      pref.update(allow_create_artists: false)
-      pref.save
+  def change_artist
+    if self.allow_create_artists == true
+      self.update(allow_create_artists: false)
+      self.save
     else
-      pref.update(allow_create_artists: true)
-      pref.save
+      self.update(allow_create_artists: true)
+      self.save
     end
   end
 end
