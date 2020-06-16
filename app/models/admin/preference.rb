@@ -9,4 +9,14 @@ class Admin::Preference < ActiveRecord::Base
       self.save
     end
   end
+
+  def change_song
+    if self.allow_create_songs == true
+      self.update(allow_create_songs: false)
+      self.save
+    else
+      self.update(allow_create_songs: true)
+      self.save
+    end
+  end
 end
