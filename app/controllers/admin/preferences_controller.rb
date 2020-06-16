@@ -6,7 +6,7 @@ class Admin::PreferencesController < ApplicationController
   def change
     @pref = Admin::Preference.find_by(id: "1")
     if params[:change_artist]
-      raise params.inspect
+      binding.pry
       # if @pref.allow_create_artists == "true"
       #   @pref.update(allow_create_artists: "false")
       #   @pref.save
