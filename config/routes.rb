@@ -6,12 +6,10 @@ Rails.application.routes.draw do
   resources :songs
 
   namespace :admin do
-    resources :preferences, only: [:index] do
-      patch '/artist/change', to: 'admin/preferences#change_artist'
-      patch '/song/change', to: 'admin/preferences#change_song'
-    end
+    resources :preferences, only: [:index]
   end
 
-
+  patch '/admin/preferences/artist/change', to: 'admin/preferences#change_artist'
+  patch '/admin/preferences/song/change', to: 'admin/preferences#change_song'
 
 end
