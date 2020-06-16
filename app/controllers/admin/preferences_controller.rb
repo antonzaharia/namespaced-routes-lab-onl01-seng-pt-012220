@@ -1,6 +1,7 @@
 class Admin::PreferencesController < ApplicationController
 
   def index
+    @pref = Admin::Preference.find_by(id: "1")
   end
 
   def change
