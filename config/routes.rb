@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     resources :preferences, only: [:index]
   end
 
-  post '/admin/preferences/change', to: 'admin/preferences#change'
+  patch '/admin/preferences/change', to: 'admin/preferences#change'
 
 end
