@@ -6,7 +6,11 @@ class Admin::PreferencesController < ApplicationController
   def change
     @pref = Admin::Preference.find_by(id: "1")
     if params[:change_artist]
-      @pref.allow_create_artists.boolean = !@pref.allow_create_artists.boolean
+      if @pref.allow_create_artists == "true"
+        @pref.allow_create_artists = "false"
+      else
+        @pref.allow_create_artists = "true"
+      end
       redirect_to admin_preferences_path, alert: "Users can create artists: #{@pref.allow_create_artists}."
     end
   end
