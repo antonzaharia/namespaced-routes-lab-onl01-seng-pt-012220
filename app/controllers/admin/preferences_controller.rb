@@ -5,5 +5,6 @@ class Admin::PreferencesController < ApplicationController
   end
 
   def change
+    raise params.inspect
   end
 end
