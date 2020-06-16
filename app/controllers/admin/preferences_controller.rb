@@ -12,7 +12,7 @@ class Admin::PreferencesController < ApplicationController
     end
   end
   def change_song
-
+    get_pref
     if params[:change_song]
       @pref.change_song
       redirect_to admin_preferences_path, alert: "Users can create songs: #{@pref.allow_create_artists}."
