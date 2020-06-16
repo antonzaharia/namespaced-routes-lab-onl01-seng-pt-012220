@@ -4,7 +4,7 @@ class Admin::PreferencesController < ApplicationController
   end
 
   def change
-    @pref = Preference.first
+    @pref = Admin::Preference.first
     if params[:change_artist]
       @pref.allow_create_artist.boolean = !@pref.allow_create_artist.boolean
     end
