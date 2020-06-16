@@ -20,3 +20,4 @@ class Admin::Preference < ActiveRecord::Base
     end
   end
 end
+ 
