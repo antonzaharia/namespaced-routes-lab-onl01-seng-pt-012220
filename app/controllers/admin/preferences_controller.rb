@@ -6,7 +6,7 @@ class Admin::PreferencesController < ApplicationController
   def change
     @pref = Admin::Preference.find_by(id: "1")
     if params[:change_artist]
-      @prefchange_artist
+      @pref.change_artist
       redirect_to admin_preferences_path, alert: "Users can create artists: #{@pref.allow_create_artists}."
     end
   end
