@@ -1,4 +1,4 @@
 <%= form_tag('/admin/preferences/change') do %>
- <%= collection_select :genre, :id, @to_select, :id, :name %>
+ <%= collection_select :preference, :allow_create_artists, @to_select, :id, :allow_create_artists %>
 
 <% end %>
