@@ -4,6 +4,8 @@ class Admin::PreferencesController < ApplicationController
   end
 
   def change
-    raise params.inspect
+    @pref = Preference.first
+    if params[:change_artist]
+      
   end
 end
