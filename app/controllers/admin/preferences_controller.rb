@@ -10,7 +10,7 @@ class Admin::PreferencesController < ApplicationController
       redirect_to admin_preferences_path, alert: "Users can create artists: #{@pref.allow_create_artists}."
     elsif params[:change_song]
       @pref.change_artist
-      redirect_to admin_preferences_path, alert: "Users can create artists: #{@pref.allow_create_artists}."
+      redirect_to admin_preferences_path, alert: "Users can create songs: #{@pref.allow_create_artists}."
     end
   end
 end
