@@ -8,6 +8,7 @@ class Admin::PreferencesController < ApplicationController
     if params[:change_artist]
       if @pref.allow_create_artists == "true"
         @pref.allow_create_artists = "false"
+        @pref.allow_create_artists.update
       else
         @pref.allow_create_artists = "true"
       end
