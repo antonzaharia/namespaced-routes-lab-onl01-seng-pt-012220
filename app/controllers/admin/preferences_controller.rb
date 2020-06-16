@@ -11,6 +11,7 @@ class Admin::PreferencesController < ApplicationController
         @pref.allow_create_artists.update
       else
         @pref.allow_create_artists = "true"
+        @pref.allow_create_artists.update
       end
       redirect_to admin_preferences_path, alert: "Users can create artists: #{@pref.allow_create_artists}."
     end
